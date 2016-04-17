@@ -2,6 +2,7 @@
 
 use \Phalcon\Validation;
 use \Phalcon\Validation\Validator\StringLength;
+use \Phalcon\Paginator\Adapter\Model as PaginatorModel;
 
 Class PostsController extends ControllerBase{
 
@@ -11,10 +12,49 @@ Class PostsController extends ControllerBase{
         if(!$logged_user){
             $this->response->redirect('signin');
         }
+
+        $current_page = 1;
+        if(isset($_GET['page'])){
+            $current_page = (int) $_GET['page'];
+        }
+
+        $all_posts = Posts::find();
+
+        $paginator = new PaginatorModel(
+            array(
+                'data' => $all_posts,
+                'limit' => 5,
+                'page' => $current_page
+            )
+        );
+
+        $page = $paginator->getPaginate();
+
+        $this->view->setVars(['page' => $page, 'logged_user_id'=>$logged_user['id']]);
     }
     
     public function createAction(){
         
+    }
+
+    public function deletePostAction(){
+
+        $logged_user = $this->session->get('logged_user_my_twitter');
+        $post_message =  $this->request->getPost('message');
+
+        $post_id = (int) $_GET['post'];
+
+        $post =  Posts::findFirstById($post_id);
+
+        if(!$post){
+            $this->session->set('message','Something went wrong. Please try again.');
+            $this->response->redirect('posts');
+        }else{
+            $post->delete();
+            $this->session->set('message','Post deleted.');
+            $this->response->redirect('posts');
+        }
+
     }
 
     public function addPostAction(){
@@ -61,7 +101,6 @@ Class PostsController extends ControllerBase{
         }
 
     }
-
 
 }
 
