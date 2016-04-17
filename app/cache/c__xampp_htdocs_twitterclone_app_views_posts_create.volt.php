@@ -24,12 +24,12 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class=""><a href="../posts">All posts</a></li>
+                    <li class=""><a href="<?= $this->url->get('posts') ?>">All posts</a></li>
                     <li class="active"><a>Create post</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="signin/doLogout">Signout</a></li>
+                    <li><a href="<?= $this->url->get('signin/doLogout') ?>">Signout</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
