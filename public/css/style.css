@@ -6,7 +6,7 @@
     width: 400px;
 }
 .signin-form input{
-    margin: 5px;
+    margin: 5px 0;
 }
 
 .message{
@@ -16,4 +16,7 @@
 }
 .create-post{
     width : 600px;
+}
+.create-post textarea{
+    margin: 5px 0;
 }

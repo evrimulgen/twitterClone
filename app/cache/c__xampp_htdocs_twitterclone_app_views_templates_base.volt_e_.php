@@ -1,4 +1,4 @@
-a:3:{i:0;s:505:"<!DOCTYPE html>
+a:3:{i:0;s:491:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,7 +8,7 @@ a:3:{i:0;s:505:"<!DOCTYPE html>
         <title>TwitterClone App</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/twitterClone/css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div class="container">

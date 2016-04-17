@@ -11,7 +11,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="../posts">All posts</a></li>
+                    <li class=""><a href="../posts">All posts</a></li>
+                    <li class="active"><a>Create post</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
@@ -45,5 +46,12 @@
         </div>
 
 </div>
-
+<style>
+    .create-post{
+        width : 600px;
+    }
+    .create-post textarea{
+        margin: 5px 0;
+    }
+</style>
 {% endblock %}
