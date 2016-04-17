@@ -8,7 +8,7 @@
         <title>TwitterClone App</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/twitterClone/css/style.css">
     </head>
     <body>
         <div class="container">
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/twitter">TWITER CLONE</a>
+                <a class="navbar-brand" href="">TWITER CLONE</a>
             </div>
         </div><!-- /.container-fluid -->
     </nav>
