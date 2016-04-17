@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="signin-container">
+
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -21,6 +21,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
+<div class="signin-container">
     <?php $logged_user = $this->session->get('logged_user_my_twitter'); ?>
     <h3>Welcome, <?php echo $logged_user['name']; ?></h3>
 

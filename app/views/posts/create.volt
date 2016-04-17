@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="signin-container">
+
 
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -20,7 +20,7 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-
+<div class="signin-container">
     <h3>Posts</h3>
 
         <?php if($this->session->get('message') != ''): ?>

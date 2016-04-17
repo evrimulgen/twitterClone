@@ -1,4 +1,7 @@
-
+.signin-container{
+    width: 90%;
+    margin: 0 auto;
+}
 .signin-form{
     width: 400px;
 }
